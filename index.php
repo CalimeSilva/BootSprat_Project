@@ -36,11 +36,10 @@
     </nav>
     <div class="box">
         <section class="banner">
-            <div class="orvelay"></div>
-            <div class="container chamada-banner text-center">
-
+            <!--<div class="orvelay"></div> -->
+            <div class="container chamada-banner">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <h2><?php echo htmlentities('<'); ?>Calime Silva<?php echo htmlentities('>') ?></h2>
                         <p>Desenvolvedor web, licenciado em Ciencia da Computação</p>
                         <button type="button" class="btn btn-success">Saiba mais</button>
@@ -48,7 +47,22 @@
                 </div>
             </div>
         </section>
+        <section class="cadastro-lead">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>Entre na nossa lista!</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="" method="post">
+                            <input type="text" name="nome" ><button type="submit" class="btn btn-default">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
