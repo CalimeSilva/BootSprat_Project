@@ -67,6 +67,24 @@ section.cadastro-lead input[type=submit]{
     border: 1px solid #ccc;
 
 }
+section.depoimento h2{
+    color:#4b4b4b;
+
+}
+section.depoimento blockquote{
+    color: #4b4b4b;
+    font-size: 16px;
+}
+section.diferencias{
+    padding: 30px 0;
+    background: rgb(225, 225, 225);
+}
+.diferencias-container{
+    margin-top: 10px;
+}
+.diferencias-container h3{
+    color: #26A599;
+}
 @media screen and (max-width:1024px){
     section.cadastrp-lead form{
         position: relative;

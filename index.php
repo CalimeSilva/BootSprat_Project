@@ -61,6 +61,46 @@
                 </div>
             </div>
         </section>
+        <section class="depoimento">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Depoimentos</h2>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae porro exercitationem dolorum nam maiores harum officia sunt eum doloribus commodi eveniet quae dolore, quo, consectetur recusandae reprehenderit. Officia, odit eveniet.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="diferencias text-center">
+            <h2>Conheça os meus serviços!</h2>
+            <div class="container diferencias-container">
+                <div class="row ">
+                    <div class="col-md-4">
+                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
+                        <h3>Diferencial #1</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
+                        <h3>Diferencial #2</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
+                        <h3>Diferencial #3</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
