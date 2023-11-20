@@ -10,7 +10,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,19 +23,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="#">Project Calime</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <div class="container">
-        <h1>Hello, world!</h1>
+    <div class="box">
+        <section class="banner">
+            <div class="orvelay"></div>
+            <div class="container chamada-banner text-center">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2><?php echo htmlentities('<'); ?>Calime Silva<?php echo htmlentities('>') ?></h2>
+                        <p>Desenvolvedor web, licenciado em Ciencia da Computação</p>
+                        <button type="button" class="btn btn-success">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
