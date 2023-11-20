@@ -76,7 +76,7 @@ section.depoimento blockquote{
     font-size: 16px;
 }
 section.diferencias{
-    padding: 30px 0;
+    padding: 30px;
     background: rgb(225, 225, 225);
 }
 .diferencias-container{
@@ -84,6 +84,29 @@ section.diferencias{
 }
 .diferencias-container h3{
     color: #26A599;
+}
+.equipe-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.equipe-single{
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+section.equipe h2{
+    margin: 0;
+    text-align: center;
+    padding: 10px 2%;
+    background: #26A599;
+    color:white;
+}
+.user-picture{
+    width: 100%;
+    padding-top: 100%;
+    background: #ccc;
+    border-radius: 50%;
 }
 @media screen and (max-width:1024px){
     section.cadastrp-lead form{

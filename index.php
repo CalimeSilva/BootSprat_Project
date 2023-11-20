@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-6">
                         <form action="" method="post">
-                            <input type="text" name="nome" ><button type="submit" class="btn btn-default">Enviar</button>
+                            <input type="text" name="nome"><button type="submit" class="btn btn-default">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -101,8 +101,67 @@
                 </div>
             </div>
         </section>
+        <section class="equipe">
+            <h2>Equipe</h2>
+            <div class="container equipe-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="equipe-single">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user-picture"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h3>Carlos Mendes</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="equipe-single">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user-picture"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h3>Celestino Gomes </h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="equipe-single">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user-picture"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h3>Amarildo Martins</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="equipe-single">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="user-picture"></div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h3>Antonio Dala</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
