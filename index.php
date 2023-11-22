@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project Calime</a>
+                <a class="navbar-brand" href="#">KAWENDA</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -40,7 +40,7 @@
             <div class="container chamada-banner">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h2><?php echo htmlentities('<'); ?>Calime Silva<?php echo htmlentities('>') ?></h2>
+                        <h2><?php echo htmlentities('<'); ?>STUDIOKAWENDA<?php echo htmlentities('>') ?></h2>
                         <p>Desenvolvedor web, licenciado em Ciencia da Computação</p>
                         <button type="button" class="btn btn-success">Saiba mais</button>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-6">
                         <form action="" method="post">
-                            <input type="text" name="nome"><button type="submit" class="btn btn-default">Enviar</button>
+                            <input type="text" name="nome"><input type="submit" value="Enviar">
                         </form>
                     </div>
                 </div>
@@ -160,8 +160,60 @@
                 </div>
             </div>
         </section>
+        <section class="final-site">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Fale Conosco</h2>
+                        <form action="">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="pwd">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Mensagem:</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Nossos planos de trafego pago</h2>
+                        <p>Os preços encontram-se em tempos promocionais por causa da Black-Friday:</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Normal</th>
+                                    <th>Plus</th>
+                                    <th>Plus Max</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>50000Kz</td>
+                                    <td>60000Kz</td>
+                                    <td>90000Kz</td>
+                                </tr>
+                                <tr>
+                                    <td>20000 Pessoas</td>
+                                    <td>30000 Pessoas</td>
+                                    <td>50000 Pessoas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
 
+
+    <footer class="text-center"><p>Todos Direitos reservados à KAWENDASTUDIOS</p></footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

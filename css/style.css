@@ -108,6 +108,28 @@ section.equipe h2{
     background: #ccc;
     border-radius: 50%;
 }
+section.final-site{
+    color: #4b4b4b;
+    border-top: 2px solid #ccc;
+    padding: 30px 0;
+    
+}
+section.final-site textarea{
+    height: 120px;
+}
+section.final-site h2{
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 24px;
+}
+footer{
+    background: rgb(225,225,225);
+    padding: 10px 0;
+    
+}
+footer p{
+    margin: 0;
+}
 @media screen and (max-width:1024px){
     section.cadastrp-lead form{
         position: relative;
