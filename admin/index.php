@@ -26,10 +26,10 @@
         <a class="navbar-brand" href="#">DAHSBOARD</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Cadastra Equipe</a></li>
-          <li><a href="#">Editar Sobre</a></li>
-          <li><a href="#">Gerenciar Equipe</a></li>
+        <ul id="menu-principal" class="nav navbar-nav">
+          <li class="active"><a ref_sys="sobre" href="#">Editar Sobre</a></li>
+          <li><a ref_sys="cadastra_equpe" href="#about">Cadastrar Equipe</a></li>
+          <li><a ref_sys="lista_equipe" href="#contact">Listar Equipe</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="?sair">Sair!</a> </li>
@@ -62,22 +62,21 @@
       <div class="row">
         <div class="col-md-3">
           <div class="list-group">
-            <a href="#" class="list-group-item active cor-padrao">
-              <span class="glyphicon glyphicon-home"></span> Home
+            <a href="#" class="list-group-item active cor-padrao" ref_sys="sobre">
+              <span class="glyphicon glyphicon-file "></span> Sobre
             </a>
-            <a href="#" class="list-group-item">
-              <span class="glyphicon glyphicon-file"></span> Sobre
+            <a href="#" class="list-group-item" ref_sys="cadastra_equpe">
+              <span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Equipe <span class="badge">2</span>
             </a>
-            <a href="#" class="list-group-item">
-              <span class="glyphicon glyphicon-th-list"></span> Equipe <span class="badge">2</span>
+            <a href="#" class="list-group-item " ref_sys="lista_equipe">
+              <span class="glyphicon glyphicon-th-list"></span> Listar Equipe
             </a>
           </div>
 
         </div>
         <div class="col-md-9">
-          <div class="panel panel-default">
-            <div class="panel-heading cor-padrao">
-              <h3 class="panel-title">Sobre</h3>
+          <div id="sobre_section" class="panel panel-default">
+            <div class="panel-heading cor-padrao" <h3 class="panel-title">Sobre</h3>
             </div>
             <div class="panel-body">
               <form action="">
@@ -90,13 +89,13 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default">
+          <div id="cadastra_equpe_section" class="panel panel-default">
             <div class="panel-heading cor-padrao">
               <h3 class="panel-title">Cadastro Equipe</h3>
             </div>
             <div class="panel-body">
               <form action="">
-              <div class="form-group">
+                <div class="form-group">
                   <label for="email">Nome do Membro:</label>
                   <input type="text" name="nome" class="form-control">
                 </div>
@@ -109,7 +108,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default">
+          <div id="lista_equipe_section" class="panel panel-default">
             <div class="panel-heading cor-padrao">
               <h3 class="panel-title">Membros da Equipe</h3>
             </div>
@@ -119,29 +118,60 @@
                   <tr>
                     <th>ID:</th>
                     <th>Nome do Membro</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>1</th>
-                    <th>Calime Silva</th>
-                  </tr>
-                  <tr>
-                    <th>1</th>
-                    <th>Calime Silva</th>
-                  </tr>
-                  <tr>
-                    <th>1</th>
-                    <th>Calime Silva</th>
-                  </tr>
+                  <?php
+                  for ($i = 0; $i < 5; $i++) {
+                  ?>
+                    <tr>
+                      <td>1</td>
+                      <td>Calime Silva</td>
+                      <td class="delete-equipe"><a href="#"><span class="glyphicon glyphicon-trash"></span></a></td>
+                    </tr>
+                  <?php } ?>
+
                 </tbody>
               </table>
+
             </div>
+
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+  <script src="../admin/js/bootstrap.min.js"></script>
+  <script src="../admin/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(function() {
+      cliqueMenu();
+      scrollItem()
+      function cliqueMenu() {
+        $('#menu-principal a, .list-group a').click(function() {
+          $('.list-group a').removeClass('active').removeClass('cor-padrao')
+          $('#menu-principal a').parent().removeClass('active');
+          console.log('#menu-principal a[ref_sys='+$(this).attr('ref_sys')+']');
+          $('#menu-principal a[ref_sys='+$(this).attr('ref_sys')+']').parent().addClass('active')
+          $('.list-group a[ref_sys='+$(this).attr('ref_sys')+']').addClass('active').addClass('cor-padrao')
+          return false;
+        })
+      }
+      function scrollItem(){
+        $('#menu-principal a, .list-group a').click(function(){
+          var ref='#'+$(this).attr('ref_sys')+'_section';
+         var offset=$(ref).offset().top
+         $('html,body').animate({'scrollTop':offset-50})
+        })
+      }
+    })
+  </script>
 </body>
 
 </html>
