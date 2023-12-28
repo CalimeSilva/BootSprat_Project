@@ -1,3 +1,13 @@
+<?php
+
+$pdo = new PDO("mysql:host=localhost;dbname=boot_project", "root", "");
+$sobre = $pdo->prepare("SELECT *FROM `tb_sobre`");
+$sobre->execute();
+$sobre = $sobre->fetch()['sobre'];
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -77,27 +87,9 @@
             <h2>Conheça os meus serviços!</h2>
             <div class="container diferencias-container">
                 <div class="row ">
-                    <div class="col-md-4">
-                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
-                        <h3>Diferencial #1</h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
-                        <h3>Diferencial #2</h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><span class="glyphicon glyphicon-leaf"></span></h3>
-                        <h3>Diferencial #3</h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum repellat assumenda a ad libero incidunt! Numquam, ad ipsa aperiam perspiciatis nihil dolore dolor! Officia eaque, consequatur dicta voluptatibus asperiores minus!
-                        </p>
-                    </div>
+                    <?php
+                    echo $sobre;
+                    ?>
                 </div>
             </div>
         </section>
@@ -105,58 +97,26 @@
             <h2>Equipe</h2>
             <div class="container equipe-container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="equipe-single">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="user-picture"></div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3>Carlos Mendes</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="equipe-single">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="user-picture"></div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3>Celestino Gomes </h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
+                    <?php
+                    $selectMembros = $pdo->prepare("SELECT *FROM `tb_equipe`");
+                    $selectMembros->execute();
+                    $membros = $selectMembros->fetchAll();
+                    for ($i = 0; $i < count($membros); $i++) {
+                    ?>
+                        <div class="col-md-6">
+                            <div class="equipe-single">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="user-picture"></div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h3><?php echo $membros[$i]['nome']; ?></h3>
+                                        <p><?php echo $membros[$i]['descricao']; ?> </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="equipe-single">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="user-picture"></div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3>Amarildo Martins</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="equipe-single">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="user-picture"></div>
-                                </div>
-                                <div class="col-md-9">
-                                    <h3>Antonio Dala</h3>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo itaque vero repudiandae natus reprehenderit earum, blanditiis perspiciatis quas iusto aspernatur voluptatum distinctio? Distinctio aliquam eos et laudantium cumque, facere nobis?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -213,7 +173,9 @@
     </div>
 
 
-    <footer class="text-center"><p>Todos Direitos reservados à KAWENDASTUDIOS</p></footer>
+    <footer class="text-center">
+        <p>Todos Direitos reservados à KAWENDASTUDIOS</p>
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
