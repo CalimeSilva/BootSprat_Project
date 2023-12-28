@@ -211,7 +211,7 @@ $sobre = $sobre->fetch()['sobre'];
         $.ajax({
           method:'post',
           data:{'id_membro':id_membro},
-          url:'delete.php'
+          url:'deletar.php'
         }).done(function() {
           el.fadeOut(function() {
             el.remove();
